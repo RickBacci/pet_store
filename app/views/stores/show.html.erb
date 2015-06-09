@@ -1,0 +1,9 @@
+<h1>show view</h1>
+
+
+<%= @store.name %>
+<%= @store.pets do |pet| %>
+  <%= pet.name %>
+  <%= pet.breed %>
+<% end  %>
+<%= link_to 'Add new pet', new_pet_path(store_id: @store.id) %>
